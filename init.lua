@@ -41,6 +41,7 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'rstacruz/vim-closer'
+  use 'lervag/vimtex'
   use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}
   use {'andymass/vim-matchup', event = 'VimEnter'}
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
@@ -71,6 +72,7 @@ require('packer').startup(function(use)
     }
   use 'hail2u/vim-css3-syntax'
   use 'preservim/nerdtree'
+  use 'ckunte/latex-snippets-vim'
 end)
 
 
@@ -102,3 +104,7 @@ keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
 vim.cmd [[nnoremap <silent>    H <Cmd>BufferPrevious<CR>]]
 vim.cmd [[nnoremap <silent>    L <Cmd>BufferNext<CR>]]
 vim.cmd [[nnoremap <silent>    <leader>f  <Cmd>NERDTreeToggle<CR>]]
+vim.cmd [[nnoremap <silent>    <leader>t <Cmd>terminal<CR>]]
+vim.cmd [[tnoremap <Esc> <C-\><C-n>]]
+vim.cmd [[set scrolloff=10]]
+
