@@ -42,6 +42,11 @@ require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'rstacruz/vim-closer'
   use 'lervag/vimtex'
+  use{ 'anuvyklack/pretty-fold.nvim',
+    config = function()
+        require('pretty-fold').setup()
+    end
+  }
   use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}
   use {'andymass/vim-matchup', event = 'VimEnter'}
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
